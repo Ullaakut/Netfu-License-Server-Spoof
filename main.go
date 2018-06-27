@@ -48,7 +48,7 @@ func validLicense(w http.ResponseWriter, r *http.Request) {
 	// 1 = license accepted
 	// -1 = rejected
 	fmt.Fprintf(w, "1")
-	fmt.Printf("Received request from %s\n", r.RemoteAddr)
+	fmt.Printf("Received request [%s] from %s\n", r.RequestURI, r.RemoteAddr)
 }
 
 func main() {
